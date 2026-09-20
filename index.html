@@ -342,7 +342,109 @@ section{padding:130px 0}.sectionHead{display:flex;justify-content:space-between;
   .service-number{
     font-size:11px;
   }
-}</style></head><body><nav class="nav" id="nav"><div class="container navin"><a class="brand" href="index.html"><img alt="CodeTwin Technology" src="logo.jpeg"/> <span>CODETWIN TECHNOLOGY</span></a><div class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a><a href="blog.html">Blog</a></div><a class="navcta" href="contact.html">Let's Build <span>↗</span></a><a class="navcta" href="https://wa.me/919987397999" rel="noopener" target="_blank">WhatsApp <span>↗</span></a><button aria-label="Open navigation" class="menu">☰</button></div></nav><a aria-label="Chat with CodeTwin Technology on WhatsApp" class="waFloat" href="https://wa.me/9987397999" id="whatsappFloat" rel="noopener" target="_blank"><img alt="WhatsApp logo" src="https://cdn.simpleicons.org/whatsapp/FFFFFF"/><span class="waLabel">Chat on WhatsApp</span></a>
+}
+/* ===== PROFESSIONAL NAVBAR SCROLL ===== */
+
+header{
+  transition:
+    background .35s ease,
+    backdrop-filter .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+}
+
+header.nav-scrolled{
+  background:rgba(7,7,7,.88) !important;
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(227,27,35,.18);
+  box-shadow:0 10px 35px rgba(0,0,0,.28);
+}
+/* ===== WHAT WE DO REVEAL ===== */
+
+.what-we-do-card{
+  opacity:0;
+  transform:translateY(55px);
+  transition:
+    opacity .75s ease,
+    transform .75s cubic-bezier(.2,.8,.2,1);
+}
+
+.what-we-do-card.reveal{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.what-we-do-card:nth-child(2){
+  transition-delay:.12s;
+}
+
+.what-we-do-card:nth-child(3){
+  transition-delay:.24s;
+}
+/* ===== PROCESS REVEAL ===== */
+
+.process-step{
+  opacity:0;
+  transform:translateY(35px);
+  transition:
+    opacity .65s ease,
+    transform .65s cubic-bezier(.2,.8,.2,1);
+}
+
+.process-step.process-visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.process-step:nth-child(2){
+  transition-delay:.1s;
+}
+
+.process-step:nth-child(3){
+  transition-delay:.2s;
+}
+
+.process-step:nth-child(4){
+  transition-delay:.3s;
+}
+
+.process-step:nth-child(5){
+  transition-delay:.4s;
+}
+/* ===== TECHNOLOGY LOGO REVEAL ===== */
+
+.techLogoRow img,
+.tech-logo-row img{
+  opacity:0;
+  transform:translateY(15px) scale(.8);
+  transition:
+    opacity .45s ease,
+    transform .45s cubic-bezier(.2,.8,.2,1);
+}
+
+.techLogoRow.tech-visible img,
+.tech-logo-row.tech-visible img{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+
+.techLogoRow img:nth-child(2),
+.tech-logo-row img:nth-child(2){
+  transition-delay:.08s;
+}
+
+.techLogoRow img:nth-child(3),
+.tech-logo-row img:nth-child(3){
+  transition-delay:.16s;
+}
+
+.techLogoRow img:nth-child(4),
+.tech-logo-row img:nth-child(4){
+  transition-delay:.24s;
+}
+
+</style></head><body><nav class="nav" id="nav"><div class="container navin"><a class="brand" href="index.html"><img alt="CodeTwin Technology" src="logo.jpeg"/> <span>CODETWIN TECHNOLOGY</span></a><div class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a><a href="blog.html">Blog</a></div><a class="navcta" href="contact.html">Let's Build <span>↗</span></a><a class="navcta" href="https://wa.me/919987397999" rel="noopener" target="_blank">WhatsApp <span>↗</span></a><button aria-label="Open navigation" class="menu">☰</button></div></nav><a aria-label="Chat with CodeTwin Technology on WhatsApp" class="waFloat" href="https://wa.me/9987397999" id="whatsappFloat" rel="noopener" target="_blank"><img alt="WhatsApp logo" src="https://cdn.simpleicons.org/whatsapp/FFFFFF"/><span class="waLabel">Chat on WhatsApp</span></a>
 <a aria-label="Open CodeTwin AI Assistant" class="chatbot-launcher" href="#" id="ctChatLauncher" title="CodeTwin AI Assistant"><span class="pulse"></span><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3C6.49 3 2 6.92 2 11.75c0 2.32 1.07 4.43 2.88 6.01L4 21l3.63-1.84c1.35.54 2.83.84 4.37.84 5.51 0 10-3.92 10-8.25S17.51 3 12 3Zm-4.2 8.05h8.4c.42 0 .75.34.75.75s-.33.75-.75.75H7.8a.75.75 0 1 1 0-1.5Zm0 3.1h5.7c.42 0 .75.34.75.75s-.33.75-.75.75H7.8a.75.75 0 1 1 0-1.5Z" fill="currentColor"></path></svg></a>
 <div aria-hidden="true" class="chatbot-panel" id="ctChatPanel">
 <div class="chatbot-head"><div class="chatbot-brand"><div class="chatbot-avatar">CT</div><div><div class="chatbot-name">CodeTwin Assistant</div><div class="chatbot-status">Online • Quick help</div></div></div><button aria-label="Close chatbot" class="chatbot-close" id="ctChatClose">×</button></div>
@@ -629,4 +731,74 @@ serviceItems.forEach(item => {
   serviceObserver.observe(item);
 });
 </script>
+<script>
+const whatWeDoCards = document.querySelectorAll(".what-we-do-card");
+
+if(whatWeDoCards.length){
+  const whatWeDoObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("reveal");
+        whatWeDoObserver.unobserve(entry.target);
+      }
+    });
+  },{
+    threshold:.15
+  });
+
+  whatWeDoCards.forEach(card=>{
+    whatWeDoObserver.observe(card);
+  });
+}
+</script>
+<script>
+const siteHeader = document.querySelector("header");
+
+if(siteHeader){
+  window.addEventListener("scroll", () => {
+    siteHeader.classList.toggle("nav-scrolled", window.scrollY > 40);
+  }, {passive:true});
+}
+</script>
+ <script>
+const techRows = document.querySelectorAll(".techLogoRow, .tech-logo-row");
+
+if(techRows.length){
+  const techObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("tech-visible");
+        techObserver.unobserve(entry.target);
+      }
+    });
+  },{
+    threshold:.2
+  });
+
+  techRows.forEach(row=>{
+    techObserver.observe(row);
+  });
+}
+</script>
+ <script>
+const processSteps = document.querySelectorAll(".process-step");
+
+if(processSteps.length){
+  const processObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("process-visible");
+        processObserver.unobserve(entry.target);
+      }
+    });
+  },{
+    threshold:.15
+  });
+
+  processSteps.forEach(step=>{
+    processObserver.observe(step);
+  });
+}
+</script>
+ 
 </body></html>

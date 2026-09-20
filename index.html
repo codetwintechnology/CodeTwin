@@ -473,6 +473,237 @@ header.nav-scrolled{
  
   transform:translateX(4px);
 }
+/* ================================
+   TRUST & CLIENT REVIEWS
+================================ */
+
+.trust-section{
+  padding:110px 0;
+  position:relative;
+  overflow:hidden;
+}
+
+.trust-head{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 55px;
+}
+
+.trust-kicker{
+  display:block;
+  color:var(--red);
+  font-family:"DM Mono",monospace;
+  font-size:11px;
+  letter-spacing:2px;
+  margin-bottom:15px;
+}
+
+.trust-head h2{
+  font-size:clamp(38px,5vw,68px);
+  line-height:1;
+  letter-spacing:-2.5px;
+  margin:0 0 18px;
+}
+
+.trust-head h2 strong{
+  color:var(--red);
+}
+
+.trust-head p{
+  color:#888;
+  line-height:1.7;
+}
+
+/* Stats */
+
+.trust-stats{
+  max-width:1050px;
+  margin:0 auto 75px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;
+  overflow:hidden;
+  background:#0b0b0b;
+}
+
+.trust-stat{
+  text-align:center;
+  padding:42px 20px;
+  border-right:1px solid rgba(255,255,255,.08);
+  opacity:0;
+  transform:translateY(35px);
+  transition:
+    opacity .7s ease,
+    transform .7s cubic-bezier(.2,.8,.2,1);
+}
+
+.trust-stat:last-child{
+  border-right:0;
+}
+
+.trust-stat.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.trust-stat:nth-child(2){
+  transition-delay:.12s;
+}
+
+.trust-stat:nth-child(3){
+  transition-delay:.24s;
+}
+
+.trust-number{
+  display:block;
+  font-size:clamp(38px,5vw,60px);
+  font-weight:800;
+  letter-spacing:-2px;
+  color:#fff;
+}
+
+.trust-label{
+  display:block;
+  margin-top:8px;
+  color:#888;
+  font-family:"DM Mono",monospace;
+  font-size:10px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+/* Reviews */
+
+.review-title{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.review-title span{
+  color:var(--red);
+  font-family:"DM Mono",monospace;
+  font-size:11px;
+  letter-spacing:2px;
+}
+
+.review-title h3{
+  margin:12px 0 0;
+  font-size:32px;
+}
+
+.review-grid{
+  max-width:1150px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.review-card{
+  padding:30px;
+  background:#0d0d0d;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  opacity:0;
+  transform:translateY(45px);
+  transition:
+    opacity .7s ease,
+    transform .7s cubic-bezier(.2,.8,.2,1),
+    border-color .3s ease,
+    box-shadow .3s ease;
+}
+
+.review-card.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.review-card:hover{
+  border-color:rgba(227,27,35,.45);
+  box-shadow:0 20px 50px rgba(0,0,0,.3);
+  transform:translateY(-5px);
+}
+
+.review-stars{
+  color:var(--red);
+  letter-spacing:3px;
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+.review-text{
+  color:#ccc;
+  font-size:15px;
+  line-height:1.75;
+  margin:0 0 22px;
+}
+
+.review-author{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.review-avatar{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#171717;
+  border:1px solid rgba(227,27,35,.35);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--red);
+  font-family:"DM Mono",monospace;
+  font-size:12px;
+}
+
+.review-author strong{
+  display:block;
+  color:#fff;
+  font-size:13px;
+}
+
+.review-author small{
+  display:block;
+  color:#666;
+  margin-top:3px;
+}
+
+/* Mobile */
+
+@media(max-width:700px){
+
+  .trust-section{
+    padding:75px 18px;
+  }
+
+  .trust-stats{
+    grid-template-columns:1fr;
+  }
+
+  .trust-stat{
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+
+  .trust-stat:last-child{
+    border-bottom:0;
+  }
+
+  .review-grid{
+    grid-template-columns:1fr;
+  }
+
+  .review-card{
+    padding:24px;
+  }
+
+  .review-text{
+    font-size:14px;
+  }
+}
 </style></head><body><nav class="nav" id="nav"><div class="container navin"><a class="brand" href="index.html"><img alt="CodeTwin Technology" src="logo.jpeg"/> <span>CODETWIN TECHNOLOGY</span></a><div class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a><a href="blog.html">Blog</a></div><a class="navcta" href="contact.html">Let's Build <span>↗</span></a><a class="navcta" href="https://wa.me/919987397999" rel="noopener" target="_blank">WhatsApp <span>↗</span></a><button aria-label="Open navigation" class="menu">☰</button></div></nav><a aria-label="Chat with CodeTwin Technology on WhatsApp" class="waFloat" href="https://wa.me/9987397999" id="whatsappFloat" rel="noopener" target="_blank"><img alt="WhatsApp logo" src="https://cdn.simpleicons.org/whatsapp/FFFFFF"/><span class="waLabel">Chat on WhatsApp</span></a>
 <a aria-label="Open CodeTwin AI Assistant" class="chatbot-launcher" href="#" id="ctChatLauncher" title="CodeTwin AI Assistant"><span class="pulse"></span><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3C6.49 3 2 6.92 2 11.75c0 2.32 1.07 4.43 2.88 6.01L4 21l3.63-1.84c1.35.54 2.83.84 4.37.84 5.51 0 10-3.92 10-8.25S17.51 3 12 3Zm-4.2 8.05h8.4c.42 0 .75.34.75.75s-.33.75-.75.75H7.8a.75.75 0 1 1 0-1.5Zm0 3.1h5.7c.42 0 .75.34.75.75s-.33.75-.75.75H7.8a.75.75 0 1 1 0-1.5Z" fill="currentColor"></path></svg></a>
 <div aria-hidden="true" class="chatbot-panel" id="ctChatPanel">
@@ -615,6 +846,220 @@ header.nav-scrolled{
 </section>
 <section class="about"><div class="container"><div class="sectionHead reveal"><div><div class="mono red">01 / WHAT WE DO</div><h2>From idea<br/>to <span style="color:#555">digital product.</span></h2></div><p>One team for development, design and digital advertising — so your online presence feels consistent from the first click to the final conversion.</p></div><div class="simpleGrid reveal"><div class="simpleCard"><b>01 / BUILD</b><h3>Websites</h3><div class="simpleServiceIcons"><img alt="React" class="" loading="lazy" src="https://cdn.simpleicons.org/react/61DAFB"/><img alt="Next.js" class="" loading="lazy" src="https://cdn.simpleicons.org/nextdotjs/FFFFFF"/><img alt="HTML5" class="" loading="lazy" src="https://cdn.simpleicons.org/html5/E34F26"/></div><p>Business websites, landing pages, portfolios, e-commerce and custom web platforms.</p></div><div class="simpleCard"><b>02 / DEVELOP</b><h3>Apps &amp; Software</h3><div class="simpleServiceIcons"><img alt="Android" class="" loading="lazy" src="https://cdn.simpleicons.org/android/3DDC84"/><img alt="Flutter" class="" loading="lazy" src="https://cdn.simpleicons.org/flutter/02569B"/><img alt="Node.js" class="" loading="lazy" src="https://cdn.simpleicons.org/node.js/5FA04E"/></div><p>Mobile applications, dashboards, business software, APIs and custom systems.</p></div><div class="simpleCard"><b>03 / GROW</b><h3>Google &amp; Meta Ads</h3><div class="simpleServiceIcons"><img alt="Google Ads" class="" loading="lazy" src="https://cdn.simpleicons.org/googleads/4285F4"/><img alt="Meta" class="" loading="lazy" src="https://cdn.simpleicons.org/meta/0081FB"/><img alt="Instagram" class="" loading="lazy" src="https://cdn.simpleicons.org/instagram/E4405F"/></div><p>Campaign setup, landing-page support, lead generation and performance-focused ad systems.</p></div></div></div></section>
 <section class="services"><div class="container"><div class="sectionHead reveal"><div><div class="mono red">02 / SERVICES</div><h2>Everything your<br/>digital business needs.</h2></div><p>Choose a single service or combine development and advertising into one complete digital solution.</p></div><div class="serviceList reveal"><div class="service"><span class="num">01</span><h3>Website Development</h3><p>Professional responsive websites built around your business, brand and customers.</p><span class="arrow">↗</span></div><div class="service"><span class="num">02</span><h3 class="serviceTitle"><img alt="Android logo" class="serviceIcon" loading="lazy" src="https://cdn.simpleicons.org/android/3DDC84"/><span>Mobile App Development</span></h3><p>Android and iOS app experiences for customer-facing and internal business needs.</p><span class="arrow">↗</span></div><div class="service"><span class="num">03</span><h3 class="serviceTitle"><img alt="Node.js logo" class="serviceIcon" loading="lazy" src="https://cdn.simpleicons.org/node.js/5FA04E"/><span>Custom Software</span></h3><p>Business tools, admin panels, dashboards, automation and custom software systems.</p><span class="arrow">↗</span></div><div class="service"><span class="num">04</span><h3 class="serviceTitle"><img alt="Google Ads logo" class="serviceIcon" loading="lazy" src="https://cdn.simpleicons.org/googleads/4285F4"/><span>Google Ads</span></h3><p>Search and performance campaigns designed to bring relevant traffic and enquiries.</p><span class="arrow">↗</span></div><div class="service"><span class="num">05</span><h3 class="serviceTitle"><img alt="Meta logo" class="serviceIcon" loading="lazy" src="https://cdn.simpleicons.org/meta/0081FB"/><span>Meta Ads</span></h3><p>Facebook and Instagram campaigns for awareness, leads, enquiries and sales.</p><span class="arrow">↗</span></div><div class="service"><span class="num">06</span><h3>UI / UX &amp; Branding</h3><p>Clean interfaces, landing pages and visual systems that make your business look professional.</p><span class="arrow">↗</span></div></div></div></section>
+ <!-- =================================
+     TRUST & CLIENT REVIEWS
+================================= -->
+
+<section class="trust-section">
+
+  <div class="trust-head">
+
+    <span class="trust-kicker">
+      03 / TRUSTED BY RESULTS
+    </span>
+
+    <h2>
+      Built for business.<br>
+      <strong>Trusted by clients.</strong>
+    </h2>
+
+    <p>
+      Real projects, real clients and real feedback.
+      We focus on building digital products that help businesses grow online.
+    </p>
+
+  </div>
+
+
+  <!-- STATS -->
+
+  <div class="trust-stats">
+
+    <div class="trust-stat">
+      <span class="trust-number" data-target="13">0+</span>
+      <span class="trust-label">Projects Completed</span>
+    </div>
+
+    <div class="trust-stat">
+      <span class="trust-number" data-target="10">0+</span>
+      <span class="trust-label">Clients Served</span>
+    </div>
+
+    <div class="trust-stat">
+      <span class="trust-number" data-target="98">0%</span>
+      <span class="trust-label">Client Satisfaction</span>
+    </div>
+
+  </div>
+
+
+  <!-- REVIEWS -->
+
+  <div class="review-title">
+
+    <span>CLIENT FEEDBACK</span>
+
+    <h3>What Our Clients Say</h3>
+
+  </div>
+
+
+  <div class="review-grid">
+
+    <!-- Review 1 -->
+
+    <article class="review-card">
+
+      <div class="review-stars">
+        ★★★★★
+      </div>
+
+      <p class="review-text">
+        "The codetwin has best platform to grow your bussiness
+        online through website , im really very satisfy with
+        codetwin technology's work."
+      </p>
+
+      <div class="review-author">
+
+        <div class="review-avatar">
+          DG
+        </div>
+
+        <div>
+          <strong>Deep Goswami</strong>
+          <small>Client</small>
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Review 2 -->
+
+    <article class="review-card">
+
+      <div class="review-stars">
+        ★★★★★
+      </div>
+
+      <p class="review-text">
+        "It was my pleasure that i go for codetwin technology,
+        there is great and realable platform that helps small/large
+        bussiness to grow online with best websites."
+      </p>
+
+      <div class="review-author">
+
+        <div class="review-avatar">
+          SM
+        </div>
+
+        <div>
+          <strong>Shivam Maheta</strong>
+          <small>Client</small>
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Review 3 -->
+
+    <article class="review-card">
+
+      <div class="review-stars">
+        ★★★★★
+      </div>
+
+      <p class="review-text">
+        "CodeTwin Technology built our custom mobile app and
+        website from scratch. Their developer team delivers clean
+        code, and the UI/UX design is super sleek and intuitive.
+        Fantastic overall service!"
+      </p>
+
+      <div class="review-author">
+
+        <div class="review-avatar">
+          F
+        </div>
+
+        <div>
+          <strong>Firoz</strong>
+          <small>Client</small>
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Review 4 -->
+
+    <article class="review-card">
+
+      <div class="review-stars">
+        ★★★★★
+      </div>
+
+      <p class="review-text">
+        "We needed a complete website redesign, and CodeTwin
+        nailed the UI/UX. The user flow is seamless and our
+        conversion rates went up immediately. Highly recommend
+        them for web projects!"
+      </p>
+
+      <div class="review-author">
+
+        <div class="review-avatar">
+          MT
+        </div>
+
+        <div>
+          <strong>Mahakali Tours &amp; Travels</strong>
+          <small>Client</small>
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Review 5 -->
+
+    <article class="review-card">
+
+      <div class="review-stars">
+        ★★★★★
+      </div>
+
+      <p class="review-text">
+        "We needed a modern, responsive website for Shiv Taxi
+        that works seamlessly on phones. CodeTwin delivered a
+        sleek design that loads fast and looks great on all devices."
+      </p>
+
+      <div class="review-author">
+
+        <div class="review-avatar">
+          ST
+        </div>
+
+        <div>
+          <strong>Shiv Tours &amp; Travels</strong>
+          <small>Client</small>
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
 <section><div class="container process"><div class="reveal"><div class="mono red">03 / PROCESS</div><h2>Simple process.<br/><span style="color:#555">Clear delivery.</span></h2><p style="color:#777;line-height:1.8">Tell us what you need. We understand the requirement, plan the solution, build it and refine it with you.</p><a class="btn red" href="contact.html">Send Your Requirement ↗</a></div><div class="steps reveal"><div class="step"><span class="num">01</span><h3>Discuss</h3><p>Share your idea, business requirement, budget or existing problem.</p></div><div class="step"><span class="num">02</span><h3>Plan</h3><p>We define scope, features, technology and the project direction.</p></div><div class="step"><span class="num">03</span><h3>Design</h3><p>We create the visual and user experience before development.</p></div><div class="step"><span class="num">04</span><h3>Build</h3><p>Development, integration, testing and responsive implementation.</p></div><div class="step"><span class="num">05</span><h3>Launch &amp; Grow</h3><p>Launch the product and support your next stage with digital marketing.</p></div></div></div></section>
 <section class="final"><div class="container reveal"><div class="mono red">04 / START A PROJECT</div><h2>Have an idea<br/><span class="outline">worth building?</span></h2><a class="btn red" href="contact.html">Tell Us About It ↗</a></div> <div class="connect-email">
   <span>CONNECT WITH US</span>
@@ -834,5 +1279,101 @@ if(processSteps.length){
   });
 }
 </script>
- 
+ <script>
+/* ================================
+   TRUST SECTION ANIMATION
+================================ */
+
+const trustStats = document.querySelectorAll(".trust-stat");
+const reviewCards = document.querySelectorAll(".review-card");
+
+const trustObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+
+    if(entry.isIntersecting){
+
+      entry.target.classList.add("visible");
+
+      if(entry.target.classList.contains("trust-stat")){
+
+        const number = entry.target.querySelector(".trust-number");
+        const target = Number(number.dataset.target);
+
+        let current = 0;
+        const duration = 1200;
+        const start = performance.now();
+
+        function countUp(time){
+
+          const progress = Math.min(
+            (time - start) / duration,
+            1
+          );
+
+          const eased =
+            1 - Math.pow(1 - progress, 3);
+
+          current = Math.floor(target * eased);
+
+          if(target === 98){
+            number.textContent = current + "%";
+          }else{
+            number.textContent = current + "+";
+          }
+
+          if(progress < 1){
+            requestAnimationFrame(countUp);
+          }
+
+        }
+
+        requestAnimationFrame(countUp);
+
+      }
+
+      trustObserver.unobserve(entry.target);
+
+    }
+
+  });
+},{
+  threshold:.18
+});
+
+
+trustStats.forEach(item=>{
+  trustObserver.observe(item);
+});
+
+
+/* Reviews */
+
+const reviewObserver = new IntersectionObserver((entries)=>{
+
+  entries.forEach(entry=>{
+
+    if(entry.isIntersecting){
+
+      const cards = [...reviewCards];
+      const index = cards.indexOf(entry.target);
+
+      setTimeout(()=>{
+        entry.target.classList.add("visible");
+      }, index * 120);
+
+      reviewObserver.unobserve(entry.target);
+
+    }
+
+  });
+
+},{
+  threshold:.12
+});
+
+
+reviewCards.forEach(card=>{
+  reviewObserver.observe(card);
+});
+</script>
 </body></html>

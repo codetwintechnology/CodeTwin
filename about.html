@@ -111,6 +111,37 @@ section{padding:130px 0}.sectionHead{display:flex;justify-content:space-between;
 .chatbot-quick{padding:0 13px 10px;display:flex;gap:7px;overflow:auto}.chatbot-quick button{flex:0 0 auto;border:1px solid rgba(227,27,35,.35);background:#111;color:#eee;border-radius:999px;padding:8px 10px;font-size:11px;cursor:pointer}.chatbot-quick button:hover{background:#1a1a1a;border-color:#e31b23}
 .chatbot-input{padding:10px;border-top:1px solid rgba(255,255,255,.09);display:flex;gap:7px}.chatbot-input input{min-width:0;flex:1;background:#111;border:1px solid rgba(255,255,255,.1);color:#fff;border-radius:10px;padding:10px 11px;outline:none}.chatbot-input input:focus{border-color:rgba(227,27,35,.7)}.chatbot-input button{width:42px;border:0;border-radius:10px;background:#e31b23;color:#fff;font-weight:800;cursor:pointer}
 @media(max-width:700px){.waFloat{right:14px;bottom:14px}.waFloat .waLabel{display:none}.chatbot-launcher{right:14px;bottom:72px}.chatbot-panel{right:14px;bottom:138px;width:calc(100vw - 28px);height:480px}}
+/* ===== PROFESSIONAL NAVBAR SCROLL ===== */
+
+header{
+  transition:
+    background .35s ease,
+    backdrop-filter .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+}
+
+header.nav-scrolled{
+  background:rgba(7,7,7,.88) !important;
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(227,27,35,.18);
+  box-shadow:0 10px 35px rgba(0,0,0,.28);
+}
+/* ===== ABOUT REVEAL ===== */
+
+.about-reveal{
+  opacity:0;
+  transform:translateY(45px);
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.2,.8,.2,1);
+}
+
+.about-reveal.visible{
+  opacity:1;
+  transform:translateY(0);
+}
 </style><meta content="website development Rajkot, mobile app development Rajkot, custom software Rajkot, UI UX design, Google Ads, Meta Ads, digital marketing" name="keywords"/><link href="https://YOUR-DOMAIN-HERE.com/about.html" rel="canonical"/><meta content="About CodeTwin Technology | Digital Solutions in Rajkot" property="og:title"/><meta content="Learn about CodeTwin Technology, a Rajkot, Gujarat digital development studio delivering websites, mobile apps, software, UI/UX and online marketing solutions." property="og:description"/><meta content="website" property="og:type"/><meta content="https://YOUR-DOMAIN-HERE.com/about.html" property="og:url"/><meta content="CodeTwin Technology" property="og:site_name"/><meta content="summary_large_image" name="twitter:card"/><meta content="About CodeTwin Technology | Digital Solutions in Rajkot" name="twitter:title"/><meta content="Learn about CodeTwin Technology, a Rajkot, Gujarat digital development studio delivering websites, mobile apps, software, UI/UX and online marketing solutions." name="twitter:description"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://YOUR-DOMAIN-HERE.com/#organization","name":"CodeTwin Technology","url":"https://YOUR-DOMAIN-HERE.com","logo":"https://YOUR-DOMAIN-HERE.com/logo.jpeg","description":"Digital development and marketing studio providing websites, mobile apps, custom software, UI/UX and advertising solutions.","areaServed":{"@type":"City","name":"Rajkot"},"sameAs":[]},{"@type":"LocalBusiness","@id":"https://YOUR-DOMAIN-HERE.com/#localbusiness","name":"CodeTwin Technology","url":"https://YOUR-DOMAIN-HERE.com","image":"https://YOUR-DOMAIN-HERE.com/logo.jpeg","priceRange":"$$","telephone":"+91 9987397999","address":{"@type":"PostalAddress","addressLocality":"Rajkot","addressRegion":"Gujarat","addressCountry":"IN"},"areaServed":{"@type":"City","name":"Rajkot"}},{"@type":"WebSite","@id":"https://YOUR-DOMAIN-HERE.com/#website","name":"CodeTwin Technology","url":"https://YOUR-DOMAIN-HERE.com"}]}</script><style>.serviceLearn{display:inline-flex;margin-top:18px;color:#fff;font:500 11px DM Mono,monospace;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid rgba(227,27,35,.45);padding-bottom:5px}.serviceLearn:hover{color:#e31b23}</style></head><body><nav class="nav" id="nav"><div class="container navin"><a class="brand" href="index.html"> <img alt="CodeTwin Technology" src="logo.jpeg"/> <span>CODETWIN TECHNOLOGY</span></a><div class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a><a href="blog.html">Blog</a></div><a class="navcta" href="contact.html">Let's Build <span>↗</span></a><a class="navcta" href="https://wa.me/919987397999" rel="noopener" target="_blank">WhatsApp <span>↗</span></a><button aria-label="Open navigation" class="menu">☰</button></div></nav><a aria-label="Chat with CodeTwin Technology on WhatsApp" class="waFloat" href="https://wa.me/919987397999" id="whatsappFloat" rel="noopener" target="_blank"><img alt="WhatsApp logo" src="https://cdn.simpleicons.org/whatsapp/FFFFFF"/><span class="waLabel">Chat on WhatsApp</span></a>
 <a aria-label="Open CodeTwin AI Assistant" class="chatbot-launcher" href="#" id="ctChatLauncher" title="CodeTwin AI Assistant"><span class="pulse"></span><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3C6.49 3 2 6.92 2 11.75c0 2.32 1.07 4.43 2.88 6.01L4 21l3.63-1.84c1.35.54 2.83.84 4.37.84 5.51 0 10-3.92 10-8.25S17.51 3 12 3Zm-4.2 8.05h8.4c.42 0 .75.34.75.75s-.33.75-.75.75H7.8a.75.75 0 1 1 0-1.5Zm0 3.1h5.7c.42 0 .75.34.75.75s-.33.75-.75.75H7.8a.75.75 0 1 1 0-1.5Z" fill="currentColor"></path></svg></a>
 <div aria-hidden="true" class="chatbot-panel" id="ctChatPanel">
@@ -174,5 +205,34 @@ quick.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)retu
 form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();if(!q)return;addMsg(q,'user');input.value='';setTimeout(()=>addMsg(answer(q)),180);});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')panel.classList.remove('open')});
 })();
+</script>
+ <script>
+const siteHeader = document.querySelector("header");
+
+if(siteHeader){
+  window.addEventListener("scroll", () => {
+    siteHeader.classList.toggle("nav-scrolled", window.scrollY > 40);
+  }, {passive:true});
+}
+</script>  
+    <script>
+const aboutElements = document.querySelectorAll(".about-reveal");
+
+if(aboutElements.length){
+  const aboutObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+        aboutObserver.unobserve(entry.target);
+      }
+    });
+  },{
+    threshold:.15
+  });
+
+  aboutElements.forEach(el=>{
+    aboutObserver.observe(el);
+  });
+}
 </script>
 </body></html>
